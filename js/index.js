@@ -3,16 +3,10 @@ const cards = document.querySelectorAll(".memory-card");
 let hasFlippedCard = false;
 let boardLocked = false;
 let firstCard, secondCard;
-
-
-
 const flipCard = e => {
     if (boardLocked) return;
-
     const target = e.target.parentElement;
-
     if (target === firstCard) return;
-
     target.classList.add('flip');
     if(!hasFlippedCard){
         // first click
@@ -30,12 +24,10 @@ const checkForMatch = () => {
     const isEqual = firstCard.dataset.framework === secondCard.dataset.framework;
     isEqual ? disableCards() : unflipCards(); 
 }
-
 const disableCards = () => {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
 };
-
 const unflipCards = () => {
  boardLocked = true;
         setTimeout(() => {           
@@ -52,7 +44,6 @@ const resetBoard = () => {
 //     hasFlippedCard = boardLocked = false;
 //     firstCard = secondCard = null;
 };
-
 cards.forEach(card => {
     // add eventListener to every card
     card.addEventListener("click", flipCard)
