@@ -1,4 +1,5 @@
 const cards = document.querySelectorAll(".memory-card");
+const resetBtn = document.querySelector(".reset")
 
 let hasFlippedCard = false;
 let boardLocked = false;
@@ -51,3 +52,7 @@ cards.forEach(card => {
     const randomIndex = Math.floor(Math.random() * cards.length);
     card.style.order = randomIndex;
 });
+resetBtn.addEventListener('click', function () {
+    window.location.reload(); 
+});
+

@@ -7,6 +7,7 @@
     height: 100vh;
     display: flex;
     background: #060ab2;
+    flex-direction: column;
 }
 .memory-game {
     width: 650px;
@@ -43,4 +44,25 @@
 }
 .front-face{
     transform: rotateY(180deg);
+}
+.reset{
+    width: 200px;
+    display: flex;
+    background-color: #1c7ccc;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    color: rgb(212, 242, 243);
+    height: 3%;
+    align-items: center;
+    font-size: larger;
+    border:  none;
+    transition: .2s;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+.reset:active{
+    transform: translateY(8px);
+    transition: transform 0.2s;
 }
